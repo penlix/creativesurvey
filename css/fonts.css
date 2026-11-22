@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Futura Regular';
+    src: url('../fonts/pffuturaneubook-regular-webfont.eot');
+    src: url('../fonts/pffuturaneubook-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pffuturaneubook-regular-webfont.woff2') format('woff2'),
+         url('../fonts/pffuturaneubook-regular-webfont.woff') format('woff'),
+         url('../fonts/pffuturaneubook-regular-webfont.ttf') format('truetype'),
+         url('../fonts/pffuturaneubook-regular-webfont.svg#pf_futura_neubook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Thin';
+    src: url('../fonts/pffutura2thin-webfont.eot');
+    src: url('../fonts/pffutura2thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pffutura2thin-webfont.woff2') format('woff2'),
+         url('../fonts/pffutura2thin-webfont.woff') format('woff'),
+         url('../fonts/pffutura2thin-webfont.ttf') format('truetype'),
+         url('../fonts/pffutura2thin-webfont.svg#pffutura2_thinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../fonts/pffutura2medium-webfont.eot');
+    src: url('../fonts/pffutura2medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pffutura2medium-webfont.woff2') format('woff2'),
+         url('../fonts/pffutura2medium-webfont.woff') format('woff'),
+         url('../fonts/pffutura2medium-webfont.ttf') format('truetype'),
+         url('../fonts/pffutura2medium-webfont.svg#pffutura2_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

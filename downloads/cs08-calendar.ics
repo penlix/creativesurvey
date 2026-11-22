@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+PRODID:-//Creative Survey//EN
+VERSION:2.0
+BEGIN:VEVENT
+URL:http://www.creativesurvey.gr/
+DTSTART:20080101
+DTEND:20080401
+UID:5lbrnt5dsfebml5rjbl7c1coa8@creativesurvey.gr
+SUMMARY:Creative Survey 2008
+LOCATION:http://www.creativesurvey.gr/
+DESCRIPTION:<b>Creative Survey 2008</b> - Η πρώτη online έρευνα για τους "δημιουργικούς" άρχισε!
+END:VEVENT
+END:VCALENDAR
