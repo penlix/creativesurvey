@@ -1,0 +1,14 @@
+{
+  "name": "creativesurvey",
+  "private": true,
+  "description": "Tests for the creativesurvey.gr static site",
+  "scripts": {
+    "serve": "serve . --listen 4173 --no-clipboard",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.63.0",
+    "serve": "14.2.7"
+  }
+}

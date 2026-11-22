@@ -44,12 +44,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<link href="css/a11y.css" rel="stylesheet">
 </head>
 
 <body>
 
 
-	<div class="scrollmenu">
+	<nav class="scrollmenu" aria-label="Κύριο μενού">
 
 		<div class="floatmenubar">
 
@@ -71,7 +72,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 
-						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart" onclick="trackOutboundLink('http://surveys.iprobe.gr/CS015/'); return false;">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em></a>
+						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 
 					</div>
 				</div>
@@ -85,21 +86,21 @@
 			<div class="row logobar nomarg">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
 
-					<a class="logosmall" href=""><img src="images/logoscroll.png" alt="" /></a>
+					<a class="logosmall" href="/"><img src="images/logoscroll.png" alt="Creative Survey 2015" /></a>
 
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
 
-					<a class="burger open" href=""><img src="images/bars.png" alt="" /></a>
+					<a class="burger open" href="#" role="button" aria-label="Μενού"><img src="images/bars.png" alt="" /></a>
 
 				</div>
 			</div>
 
 		</div>
 
-	</div>
+	</nav>
 
-	<div class="topbar" id="container">
+	<header class="topbar" id="container"><h1 class="sr-only">Creative Survey 2015</h1>
 
 		<video autoplay loop muted playsinline>
 			<source src="video/video.webmhd.webm" type="video/webm">
@@ -113,12 +114,12 @@
 			<div class="row logobar">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
 
-					<a class="logosmall" href=""><img src="images/logosmall.png" alt="" /></a>
+					<a class="logosmall" href="/"><img src="images/logosmall.png" alt="Creative Survey 2015" /></a>
 
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
 
-					<a class="burger open" href=""><img src="images/bars.png" alt="" /></a>
+					<a class="burger open" href="#" role="button" aria-label="Μενού"><img src="images/bars.png" alt="" /></a>
 
 					<div class="menubar">
 
@@ -149,7 +150,7 @@
 				<div class="row logorow ">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center nopadding">
 
-						<a class="logo" href=""><img class="img-responsive" src="images/logo.png" alt="" /></a>
+						<a class="logo" href="/"><img class="img-responsive" src="images/logo.png" alt="Creative Survey 2015" /></a>
 
 					</div>
 				</div>
@@ -157,7 +158,7 @@
 				<div class="row buttonrow">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center nopadding">
 
-						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart" onclick="trackOutboundLink('http://surveys.iprobe.gr/CS015/'); return false;">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em></a>
+						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 
 					</div>
 				</div>
@@ -167,20 +168,20 @@
 			<div class="row inforow">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
 
-					<a class="data" href="">Προστασία προσωπικών δεδομένων</a>
+					<a class="data" href="#" role="button">Προστασία προσωπικών δεδομένων</a>
 
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
 
-					<div id="nav3"><a class="movedown" href="#section-cs"><img src="images/arrowdown.png" alt="" /></a></div>
+					<div id="nav3"><a class="movedown" href="#section-cs"><img src="images/arrowdown.png" alt="Μετάβαση στο περιεχόμενο" /></a></div>
 
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
 
 					<ul class="social-top">
-						<li><a href="http://www.facebook.com/creativesurveygr" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="https://twitter.com/creativesurvey" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://www.linkedin.com/company/creative-survey" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="http://www.facebook.com/creativesurveygr" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+						<li><a href="https://twitter.com/creativesurvey" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+						<li><a href="http://www.linkedin.com/company/creative-survey" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
 					</ul>
 
 				</div>
@@ -188,9 +189,9 @@
 
 		</div>
 
-	</div>
+	</header>
 
-	<div class="wrapper">
+	<div class="wrapper"><main id="main">
 
 		<div class="container" id="section-cs">
 
@@ -221,7 +222,7 @@
 				<div class="row padded large">
 					<div class="col-lg-12 text-center">
 
-						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart" onclick="trackOutboundLink('http://surveys.iprobe.gr/CS015/'); return false;">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em></a>
+						<a href="http://surveys.iprobe.gr/CS015/" target="_blank" class="takepart">ΠΑΡΤΕ ΜΕΡΟΣ ΣΤΗΝ ΕΡΕΥΝΑ ΤΩΡΑ<span></span><em></em><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 
 					</div>
 				</div>
@@ -284,7 +285,7 @@
 									<div class="cont">
 										<p><strong>Κωνσταντίνος Δημητριάδης</strong></p>
 										<p>UI designer, συνιδρυτής των UX Magazine, Creative Survey &amp; Listiki. Σημερα είναι Head of Design του Proto.io.</p>
-										<p><a href="http://www.ohmylovely.com" target="_blank">ohmylovely.com</a></p>
+										<p><a href="http://www.ohmylovely.com" target="_blank">ohmylovely.com<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></p>
 									</div>
 								</li>
 								<li>
@@ -300,7 +301,7 @@
 									<div class="cont">
 										<p><strong>Βασίλης Αυδίκος</strong></p>
 										<p>Λέκτορας του τμήματος Οικονομικής και Περιφερειακής Ανάπτυξης του Παντείου Πανεπιστημίου</p>
-										<p><a href="http://creativegreece.net" target="_blank">creativegreece.net</a></p>
+										<p><a href="http://creativegreece.net" target="_blank">creativegreece.net<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></p>
 									</div>
 								</li>
 								<li>
@@ -308,7 +309,7 @@
 									<div class="cont">
 										<p><strong>Αθανάσιος Καλογερέσης</strong></p>
 										<p>Οικονομικός γεωγράφος, επίκουρος καθηγητής στο Τμήμα Μηχανικών Χωροταξίας και Ανάπτυξης της Πολυτεχνικής Σχολής του ΑΠΘ.</p>
-										<!-- <p><a href="http://users.auth.gr/kaloger" target="_blank">users.auth.gr/kaloger</a></p> -->
+										<!-- <p><a href="http://users.auth.gr/kaloger" target="_blank">users.auth.gr/kaloger<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></p> -->
 									</div>
 								</li>
 							</ul>
@@ -330,7 +331,7 @@
 
 					<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right sm-center">
 
-						<a href="http://www.creativesurvey.gr/2008" target="_blank" class="bookload"><img src="images/book.png" alt="" /></a>
+						<a href="http://www.creativesurvey.gr/2008" target="_blank" class="bookload"><img src="images/book.png" alt="" /><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 
 					</div>
 
@@ -340,7 +341,7 @@
 
 						<p>Στο Creative Survey 2008 κλήθηκαν να συμμετάσχουν όσοι άνηκαν στο δημιουργικό κοινό του χώρου της Οπτικής Επικοινωνίας. Η έρευνα διεξάχθηκε σε περίοδο 3 μηνών, από την 1η Ιανουαρίου έως και τις 31 Μαρτίου 2008. Συνολικά, συμμετείχαν στην έρευνα 1050 άτομα.</p>
 
-						<a href="http://www.creativesurvey.gr/2008" target="_blank" class="download">Δες το Creative Survey 2008</a>
+						<a href="http://www.creativesurvey.gr/2008" target="_blank" class="download">Δες το Creative Survey 2008<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 
 					</div>
 
@@ -377,67 +378,67 @@
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.akto.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-akto.png" alt="AKTO">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.designmag.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-designmag.png" alt="+Design Magazine">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.digitized.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-digitized.png" alt="Digitized Digital Design Conference">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
-							<a class="thumbnail" href="www.edie-hida.org.gr" target="_blank">
+							<a class="thumbnail" href="http://www.edie-hida.org.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-edie.png" alt="Hellenic Interior Designers Association">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.facebook.com/hegrade" target="_blank">
 								<img class="img-responsive" src="images/sponsor-hegrade.png" alt="Hellenic Graphic Design">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.fotolio.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-fotolio.png" alt="Fotolio &amp; Typicon">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.marketingweek.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-mw.png" alt="Marketing Week Online">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.parachute.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-pf.png" alt="Parachute Fonts">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.pathfinder.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-pathfinder.png" alt="Pathfinder">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.vcdc.gr/forum" target="_blank">
 								<img class="img-responsive" src="images/sponsor-vcdc.png" alt="Visual Communication Designers Club">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 						<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 thumb col-centered">
 							<a class="thumbnail" href="http://www.vakalo.gr" target="_blank">
 								<img class="img-responsive" src="images/sponsor-vakalo.png" alt="Vakalo">
-							</a>
+							<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
 						</div>
 
 					</div>
@@ -448,7 +449,7 @@
 
 		</div>
 
-		<div class="footer top">
+		</main><footer><div class="footer top">
 
 			<div class="container">
 
@@ -456,16 +457,16 @@
 
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
 
-						<a href=""><img src="images/logofooter.png" alt="" /></a>
+						<a href="/"><img src="images/logofooter.png" alt="Creative Survey 2015" /></a>
 
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
 
 						<ul class="social-bottom">
-							<li><a href="http://www.facebook.com/creativesurveygr" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://twitter.com/creativesurvey" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="http://www.linkedin.com/company/creative-survey" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="http://www.facebook.com/creativesurveygr" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+							<li><a href="https://twitter.com/creativesurvey" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
+							<li><a href="http://www.linkedin.com/company/creative-survey" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></li>
 						</ul>
 
 					</div>
@@ -484,19 +485,19 @@
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-left sm-center">
 
-						<span>Website by <a href="https://www.behance.net/tzoAnagnostou" target="_blank">John Anagnostou</a></span>
+						<span>Website by <a href="https://www.behance.net/tzoAnagnostou" target="_blank">John Anagnostou<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></span>
 
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center sm-center">
 
-						<span>Brand Identity by <a href="https://www.behance.net/VP_Dezign" target="_blank">Vasilis Pallas</a></span>
+						<span>Brand Identity by <a href="https://www.behance.net/VP_Dezign" target="_blank">Vasilis Pallas<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></span>
 
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-right sm-center">
 
-						<span>Code by <a href="http://www.pantso.gr" target="_blank">Panagiotis Grigoropoulos</a></span>
+						<span>Code by <a href="http://www.pantso.gr" target="_blank">Panagiotis Grigoropoulos<span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a></span>
 
 					</div>
 
@@ -506,13 +507,13 @@
 
 		</div>
 
-	</div>
+	</footer></div>
 
 	<div class="terms">
 
 		<div class="contterms">
 
-			<a href="" class="close"></a>
+			<a href="#" class="close" role="button" aria-label="Κλείσιμο"></a>
 
 			<p><strong>Προστασία Προσωπικών Δεδομένων</strong></p>
 
@@ -578,5 +579,6 @@
 	<script src="js/jquery.stellar.js"></script>
 	<script src="js/common.js"></script>
 
+	<script src="js/a11y.js"></script>
 </body>
 </html>

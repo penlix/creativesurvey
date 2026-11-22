@@ -1,0 +1,9 @@
+# Development files that should not be served on the website
+node_modules
+tests
+test-results
+playwright-report
+playwright.config.js
+package.json
+package-lock.json
+.github

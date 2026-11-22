@@ -78,6 +78,12 @@ $(function() {
 					
 	});
 
+	// If the video metadata loaded before this handler was attached (e.g. from cache),
+	// run the layout now; otherwise the content would cover the header.
+	$('#container video').each(function() {
+		if (this.readyState >= 1) { $(this).trigger('loadedmetadata'); }
+	});
+
 	$.stellar({
 		scrollProperty: 'scroll',
 		responsive: true,
