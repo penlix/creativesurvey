@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+/*
+	-------------------------------------------------------------
+	Lovely CSS - A CSS framework by Constantinos Demetriadis
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Page Template CSS
+	Author:			Constantinos Demetriadis
+	Filename:		tpl.screen.css
+	Version:		0.8.3 Beta
+	Date:			Nov 2007
+	-------------------------------------------------------------
+*/
+	
+	
+/*	-------------------------------------------------------------
+	Global styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	The following styles apply to the site
+					globally.
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		body {
+			background-color: #fff;
+			background-image: url(../_images/body-gradient-bg.jpg);
+			background-repeat: no-repeat;
+			background-position: top;
+			font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px; }
+			
+		a, a:link, a:visited {
+			font-weight: bold;
+			background-image: url(../_images/a-bg.gif);
+			background-repeat: repeat-x;
+			background-position: bottom;
+			color: #666;
+			text-decoration: none; }
+			
+		a:hover {
+			color: #000;
+			text-decoration: underline; }
+			
+
+/*	-------------------------------------------------------------
+	Grid Container
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#gridContainer {
+			margin: auto auto;
+			width: 960px; }
+			
+
+/*	-------------------------------------------------------------
+	Top Container
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#topContainer {
+			height: 300px;
+			margin: 0px 0px 10px 0px; }
+			
+		#topContainer h1 {
+			text-indent: -9999px;
+			background-image: url(../_images/header-title.gif);
+			background-repeat: no-repeat;
+			height: 180px;
+			margin: 0px 160px; }
+			
+		#topContainer #countdownContainer {
+			width: 640px;
+			height: 120px;
+			margin: 0px 160px;
+			padding: 0px 0px 0px 0px; }
+			
+		/*#topContainer #countdownContainer .countdowntimer {
+			background-image: url(../_images/header-countdown-bg.gif);
+			background-repeat: no-repeat;
+			height: 112px;
+			width: 620px;
+			margin: 0px 160px;
+			padding: 8px 10px 0px 10px; }
+			
+		#topContainer #countdownContainer .countdowntimer img {
+			border: 0px solid #000;
+			display: block;
+			float: left;
+			width: 125px;
+			height: 70px;
+			padding: 0px;
+			margin: 0px 15px 0px 15px; }
+			
+		#topContainer #countdownContainer .countdowntimer a {
+			background-image: url(../_images/header-participate-btn.gif);
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			display: block;
+			height: 112px;
+			width: 620px;
+			margin: 0px;
+			padding: 0px; }*/
+			
+		#topContainer #participate {
+			height: 112px;
+			width: 620px;
+			margin: 0px 160px;
+			padding: 8px 10px 0px 10px; }
+			
+		#topContainer #participate a {
+			background-image: url(../_images/header-participate-btn.gif);
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			display: block;
+			height: 112px;
+			width: 620px;
+			margin: 0px;
+			padding: 0px; }
+			
+
+/*	-------------------------------------------------------------
+	Body Container
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer { }
+		
+		#bodyContainer h2 {
+			background-position: left;
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			height: 17px;
+			padding: 0px 0px 10px 0px;
+			margin: 20px 15px 0px 15px;
+			border-bottom: 1px solid #999; }
+		
+		#bodyContainer p {
+			color: #666;
+			line-height: 1.4em;
+			padding: 0px 0px 10px 0px;
+			margin: 10px 13px 0px 15px; }
+		
+		#bodyContainer p strong {
+			color: #333; }
+		
+		#bodyContainer .contact p {
+			border-bottom: 1px solid #eaeaea; }
+		
+		#bodyContainer .sponsors a {
+			float: left;
+			display: block;
+			height: 50px;
+			background: none;
+			margin: 0px 15px 0px 0px; }
+			
+			
+/*	Thickbox
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#TB_ajaxContent {
+			padding: 15px; }
+			
+		#TB_ajaxContent h1 {
+			color: #666;
+			margin: 15px 0px 20px 0px;
+			font-size: 1.8em;
+			font-weight: bold; }
+			
+		#TB_ajaxContent h2 {
+			color: #999;
+			border-bottom: 1px solid #ccc;
+			padding: 0px 0px 5px 0px;
+			margin: 20px 0px 5px 0px;
+			font-size: 1.3em;
+			font-weight: bold; }
+			
+		#TB_ajaxContent p {
+			color: #333;
+			line-height: 1.2em;
+			padding: 0px;
+			margin: 0px 0px 0px 0px; }
+			
+		#TB_ajaxContent p img,
+		#TB_ajaxContent p strong {
+			padding: 0px;
+			margin: 0px; }
+			
+		#TB_ajaxContent ul li {
+			border: none;
+			background-image: url(../_images/icons-system/bullet_black.png);
+			background-repeat: no-repeat;
+			background-position: left;
+			padding: 2px 20px; }
+			
+		#TB_ajaxContent form {
+			margin: 0px;
+			padding: 0px; }
+			
+		#TB_ajaxContent form input {
+			display: block;
+			font-size: 1.1em;
+			margin: 3px 0px 0px 0px;
+			width: 720px;
+			padding: 3px; }
+			
+			
+/*	Unordered Lists in Navigation
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		ul {
+			margin: 0px 15px;
+			padding: 0px;
+			list-style: none; }
+			
+		ul li {
+			background-position: 0px 10px;
+			background-repeat: no-repeat;
+			border-bottom: 1px solid #eaeaea;
+			padding: 10px 0px 10px 20px; }
+			
+		ul li.media-kit {
+			background-image: url(../_images/icons-system/images.png); }
+			
+		ul li.calendar {
+			background-image: url(../_images/icons-system/date_add.png); }
+			
+		ul li.banners {
+			background-image: url(../_images/icons-system/layout_sidebar.png); }
+			
+		ul li.desktop {
+			background-image: url(../_images/icons-system/monitor.png); }
+			
+		ul li span {
+			font-size: 0.9em; }
+			
+		ul li span.new {
+			font-weight: bold;
+			color: #f30; }
+			
+			
+/*	Unordered Lists in Supporters
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#supporters {
+			margin: 0px 15px;
+			padding: 0px;
+			list-style: none; }
+			
+		#supporters li {
+			float: left;
+			width: 155px;
+			padding: 6px 0px 5px 0px; }
+			
+		#supporters li a {
+			font-size: 0.9em;
+			background-image: url(../_images/icons-system/link.png);
+			background-repeat: no-repeat;
+			background-position: left;
+			padding: 1px 0px 1px 20px; }
+			
+			
+/*	Unordered Lists
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		form {
+			margin: 0px 15px;
+			padding: 0px; }
+			
+		form fieldset {
+			border: none;
+			margin: 0px;
+			padding: 0px; }
+			
+		form input.inputText {
+			float: left;
+			border: 1px solid #333;
+			font-size: 1.2em;
+			width: 190px;
+			margin: 1px 5px 0px 0px;
+			padding: 6px; }
+			
+		form input.inputSubmit {
+			float: left;
+			width: 60px;
+			height: 32px;
+			margin: 0px;
+			padding: 0px; }
+			
+
+/*	About
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .about h2 {
+			background-image: url(../_images/h2-title-about.gif); }
+			
+
+/*	Participate
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .participate h2 {
+			background-image: url(../_images/h2-title-participate.gif); }
+			
+
+/*	Download
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .download h2 {
+			background-image: url(../_images/h2-title-download.gif); }
+			
+
+/*	Contact
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .contact h2 {
+			background-image: url(../_images/h2-title-contact.gif); }
+			
+
+/*	Sponsors
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .sponsors h2 {
+			background-image: url(../_images/h2-title-sponsors.gif); }
+			
+
+/*	Newsletter
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .newsletter h2 {
+			background-image: url(../_images/h2-title-newsletter.gif); }	
+			
+
+/*	Supporters
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#bodyContainer .supporters h2 {
+			background-image: url(../_images/h2-title-supporters.gif); }
+			
+		#bodyContainer .supporters p {
+			border-bottom: 1px solid #eaeaea; }
+			
+			
+		
+			
+
+/*	-------------------------------------------------------------
+	Footer Container
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		#footerContainer {
+			width: 930px;
+			border-top: 1px solid #333;
+			padding: 10px 0px;
+			margin: 30px 0px 10px 15px; }
+			
+		#footerContainer span {
+			color: #999; }
+		
+		
+		
+		
+		
+	
+			

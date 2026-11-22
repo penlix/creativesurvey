@@ -139,7 +139,8 @@ $(function() {
 	});
 	
 	jQuery.fn.center = function () {
-		this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) +  $(window).scrollTop()) + "px");
+		// The header is position:fixed, so the page scroll must not be added (it pushed the content off screen on resize).
+		this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2)) + "px");
 		return this;
 	}
 

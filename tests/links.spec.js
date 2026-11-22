@@ -7,18 +7,21 @@ const DOWNLOADS = ['cs15.pdf', 'cs08.pdf', 'cs08-datamine.pdf', 'cs08-mediakit.z
 test('all internal links and assets respond with 200', async ({ page, request, baseURL }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'Same URLs on every viewport; checked once.');
   await blockThirdParty(page);
-  await page.goto('/', { waitUntil: 'domcontentloaded' });
-  const found = await page.evaluate(() => {
+  const found = [];
+  for (const path of ['/', '/2008/']) {
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
+  found.push(...await page.evaluate(() => {
     const out = [];
     const add = (v) => v && !v.startsWith('#') && out.push(v);
     document.querySelectorAll('a[href]').forEach((a) => add(a.getAttribute('href')));
     document.querySelectorAll('img[src], script[src], source[src]').forEach((e) => add(e.getAttribute('src')));
     document.querySelectorAll('link[href]').forEach((l) => add(l.getAttribute('href')));
-    return out;
-  });
+    return out.map((v) => new URL(v, location.href).toString());
+  }));
+  }
   const urls = new Set();
   for (const raw of found) {
-    const url = new URL(raw, page.url());
+    const url = new URL(raw);
     if (url.origin !== new URL(baseURL).origin) continue;
     url.hash = '';
     urls.add(url.toString());

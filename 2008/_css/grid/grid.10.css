@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*
+	-------------------------------------------------------------
+	Lovely CSS - A CSS framework by Constantinos Demetriadis
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	10 Column Grid Module
+	Author:			Constantinos Demetriadis
+	Filename:		inc.grid-10.css
+	Version:		0.8.3 Beta
+	Date:			Nov 2007
+	-------------------------------------------------------------
+	
+*/
+
+/*	-------------------------------------------------------------
+	1 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-one {
+			float: left;
+			width: 96px; }
+			
+
+/*	2 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-two {
+			float: left;
+			width: 192px; }
+			
+
+/*	3 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-three {
+			float: left;
+			width: 288px; }
+			
+
+/*	4 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-four {
+			float: left;
+			width: 384px; }
+			
+
+/*	5 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-five {
+			float: left;
+			width: 480px; }
+			
+
+/*	6 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-six {
+			float: left;
+			width: 576px; }
+			
+
+/*	7 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-seven {
+			float: left;
+			width: 672px; }
+			
+
+/*	8 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-eight {
+			float: left;
+			width: 768px; }
+			
+
+/*	9 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-nine {
+			float: left;
+			width: 864px; }
+			
+
+/*	10 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-ten {
+			float: left;
+			width: 960px; }
+	
+			

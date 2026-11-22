@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/*
+	-------------------------------------------------------------
+	Lovely CSS - A CSS framework by Constantinos Demetriadis
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	3 Column Grid Module
+	Author:			Constantinos Demetriadis
+	Filename:		inc.grid-3.css
+	Version:		0.8.3 Beta
+	Date:			Nov 2007
+	-------------------------------------------------------------
+	
+*/
+
+/*	-------------------------------------------------------------
+	1 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-one {
+			float: left;
+			width: 320px; }
+			
+
+/*	2 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-two {
+			float: left;
+			width: 640px; }
+			
+
+/*	3 Grid Columns
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.grid-three {
+			float: left;
+			width: 960px; }
+			
+			
+			

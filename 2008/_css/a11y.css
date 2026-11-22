@@ -1,0 +1,31 @@
+/* 2008 page: text results button in the style of the original image button, plus focus. */
+#topContainer #participate a.resultsButton {
+  background-image: none;
+  text-indent: 0;
+  box-sizing: border-box;
+  width: 430px;
+  height: 68px;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(#f4f4f4, #c9c9c9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), inset 0 1px 0 #fff;
+  color: #222;
+  font: bold 24px/1.1 Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+#topContainer #participate a.resultsButton span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+}
+#topContainer #participate a.resultsButton:hover {
+  background: linear-gradient(#ffffff, #d9d9d9);
+}
+:focus-visible {
+  outline: 3px solid #f30 !important;
+  outline-offset: 2px !important;
+}

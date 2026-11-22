@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*
+	-------------------------------------------------------------
+	Lovely CSS - A CSS framework by Constantinos Demetriadis
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Master CSS Module
+	Author:			Constantinos Demetriadis
+	                - - - - - - - - - - - - - - - - - - - - - - -
+					Original code by Rick Lomas, Nick Rigby,
+					Crucial Webhosting
+	                - - - - - - - - - - - - - - - - - - - - - - -
+	Filename:		inc.master.css
+	Version:		0.8.3 Beta
+	Date:			Nov 2007
+	-------------------------------------------------------------
+*/
+	
+
+/*	Global
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		body, html {
+			margin: 0px;
+			padding: 0px; }
+	
+		html {
+			height: 100%;
+			width: 100%; }
+		
+		a img, iframe {
+			border: 0px; }
+
+/*	Div ans Span
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		div, span {
+			margin: 0px;
+			padding: 0px;
+			font-size: 1em;
+			font-weight: normal; }
+
+/*	Headings
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0px;
+			padding: 0px;
+			font-size: 1em;
+			font-weight: normal; }
+
+/*	Paragraphs and Text
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		p, blockquote, pre, a, abbr, acronym, address, big, cite,
+		code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var {
+			margin: 0px;
+			padding: 0px;
+			font-size: 1em;
+			font-weight: normal;
+			font-style: normal; }
+
+		strong {
+			font-weight: bold; }
+
+		em {
+			font-style: italic; }
+
+/*	Horizontal Rule
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		hr {
+			background-color: #ddd;
+			color: #ddd;
+			margin: 10px 0px 10px 0px;
+			padding: 0px;
+			border: 0px;
+			height: 1px; }
+
+/*	Lists
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		ul, ol, dl, li, dt, dd { }
+
+/*	Forms
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		form, fieldset {
+			margin: 0px;
+			padding: 0px;
+			border: 0px; }
+
+		legend {
+			margin: 0px;
+			padding: 0px; }
+
+		label {
+			margin: 0px;
+			padding: 0px;
+			font-weight: bold; }
+
+		input, textarea, select, button {
+			margin: 0px;
+			padding: 0px;
+			font-size: 1em; }
+
+		select {
+			margin: inherit; }
+
+/*	Tables
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		table {
+			margin: 0px;
+			padding: 0px;
+			border-collapse: collapse;
+			border: 0px; }
+			
+		tbody, tfoot, thead, tr, td, th, caption {
+			margin: 0px;
+			padding: 0px;
+			font-size: 1em;
+			font-weight: normal;
+			text-align: left; }
+			
+		th {
+			font-weight: bold; }
+	
+	
+/*	Global Classes
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.clear 			{ clear: both; }
+		
+		.float-left 	{ float: left; }
+		.float-right 	{ float: right; }
+		
+		.text-left 		{ text-align: left; }
+		.text-right 	{ text-align: right; }
+		.text-center 	{ text-align: center; }
+		.text-justify 	{ text-align: justify; }
+		
+		.bold 			{ font-weight: bold; }
+		.italic 		{ font-style: italic; }
+		.underline 		{ border-bottom: 1px solid; }
+		.highlight 		{ background: #ffc; }
+	
+	

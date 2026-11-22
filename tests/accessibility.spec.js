@@ -11,12 +11,14 @@ function describe(violations) {
     .join('\n');
 }
 
-test('home page has no WCAG 2.2 AA violations', async ({ page }) => {
-  await openPage(page);
-  await scrollThrough(page);
-  const { violations } = await new AxeBuilder({ page }).withTags(TAGS).analyze();
-  expect(violations, describe(violations)).toEqual([]);
-});
+for (const [name, path] of [['2015 home page', '/'], ['2008 page', '/2008/']]) {
+  test(`${name} has no WCAG 2.2 AA violations`, async ({ page }) => {
+    await openPage(page, path);
+    await scrollThrough(page);
+    const { violations } = await new AxeBuilder({ page }).withTags(TAGS).analyze();
+    expect(violations, describe(violations)).toEqual([]);
+  });
+}
 
 test('page has one h1, landmarks and Greek language', async ({ page }) => {
   await openPage(page);

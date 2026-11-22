@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*
+	-------------------------------------------------------------
+	Lovely CSS - A CSS framework by Constantinos Demetriadis
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	Description:	Drupal CSS Template
+	Author:			Constantinos Demetriadis
+	Filename:		tpl.drupal.css
+	Version:		0.8.3 Beta
+	Date:			Nov 2007
+	-------------------------------------------------------------
+*/
+	
+	
+/*	Drupal Styles
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+		.form-item input.form-text,
+		.form-item textarea.textarea,
+		.description {
+			width: 100%;
+			padding: 0; }
+			
+		.form-item select {
+			width: auto; }
+			
+		.box .form-item select {
+			font-size: 0.8em; }
+			
+		.user-login-block .form-item input {
+			width: auto; }
+			
+		table {
+			font-size: 0.8em;
+			letter-spacing: -0.1em; }
+			
+		th {
+			letter-spacing: normal; }
+			
+		table strong {
+			letter-spacing: normal; }
+			
+		.node table {
+			font-size: 1em;
+			letter-spacing: normal; }
+			
+		#searchform {
+			margin: 10px auto;
+			padding: 5px 3px;
+			text-align: center; }
+			
+		#searchform #s {
+			width: 100px;
+			padding: 2px;
+			margin: 0; }
+			
+		#searchform #searchsubmit {
+			padding: 1px;
+			margin: 0; }
+		
+		

@@ -102,3 +102,30 @@ test('menu links scroll to their section', async ({ page }, testInfo) => {
     await expect.poll(() => page.evaluate(() => window.scrollY), { timeout: 3000 }).toBeGreaterThan(target - 200);
   }
 });
+
+test('header content stays visible after resizing while scrolled down', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'Desktop layout.');
+  await openPage(page);
+  await page.evaluate(() => window.scrollTo(0, 2000));
+  await page.waitForTimeout(300);
+  await page.setViewportSize({ width: 1280, height: 700 }); // e.g. the browser download bar appears
+  await page.waitForTimeout(300);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(800);
+  await expect(page.locator('.topbar .logo')).toBeInViewport();
+  await expect(page.locator('.topbar a.takepart')).toBeInViewport();
+});
+
+test('2008 links and results download work', async ({ page, request }) => {
+  await openPage(page);
+  const links = page.locator('a[href="/2008/"]');
+  await expect(links).toHaveCount(2);
+  await links.last().scrollIntoViewIfNeeded();
+  await links.last().click();
+  await expect(page).toHaveURL(/\/2008\/$/);
+  await expect(page.locator('h1')).toContainText('Creative Survey 2008');
+  const button = page.locator('#participate a');
+  await expect(button).toHaveAttribute('href', '/downloads/cs08.pdf');
+  await expect(button).toBeVisible();
+  expect((await request.get('/downloads/cs08.pdf')).status()).toBe(200);
+});
