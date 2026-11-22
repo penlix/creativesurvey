@@ -53,8 +53,15 @@
       terms.setAttribute('role', 'dialog');
       terms.setAttribute('aria-modal', 'true');
       terms.setAttribute('aria-label', 'Προστασία προσωπικών δεδομένων');
-      opener.addEventListener('click', function () { setTimeout(function () { close.focus(); }, 0); });
-      close.addEventListener('click', function () { setTimeout(function () { opener.focus(); }, 0); });
+      // The page behind the dialog does not scroll while it is open.
+      opener.addEventListener('click', function () {
+        document.documentElement.classList.add('a11y-scroll-lock');
+        setTimeout(function () { close.focus(); }, 0);
+      });
+      close.addEventListener('click', function () {
+        document.documentElement.classList.remove('a11y-scroll-lock');
+        setTimeout(function () { opener.focus(); }, 0);
+      });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && window.getComputedStyle(terms).display !== 'none') close.click();
       });

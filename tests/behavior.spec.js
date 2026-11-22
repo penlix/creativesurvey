@@ -2,15 +2,29 @@
 const { test, expect } = require('@playwright/test');
 const { openPage } = require('./helpers');
 
-test('survey buttons open the survey in a new tab', async ({ page }) => {
+test('survey buttons download the 2015 results PDF', async ({ page, request }) => {
   await openPage(page);
   const links = page.locator('a.takepart');
   await expect(links).toHaveCount(3);
   for (const link of await links.all()) {
-    await expect(link).toHaveAttribute('href', 'http://surveys.iprobe.gr/CS015/');
-    await expect(link).toHaveAttribute('target', '_blank');
-    expect(await link.getAttribute('onclick')).toBeNull();
+    await expect(link).toHaveAttribute('href', '/downloads/cs15.pdf');
+    await expect(link).toHaveAttribute('download', 'Creative-Survey-2015.pdf');
+    expect(await link.getAttribute('target')).toBeNull();
+    await expect(link).toHaveAttribute('aria-label', /^ΚΑΤΕΒΑΣΕ ΤΗΝ ΕΡΕΥΝΑ/);
   }
+  const res = await request.get('/downloads/cs15.pdf');
+  expect(res.status()).toBe(200);
+  expect(res.headers()['content-type']).toContain('pdf');
+});
+
+test('hidden helper text never shows inside the survey buttons', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'Hover runs on desktop.');
+  await openPage(page);
+  const button = page.locator('.buttonbar a.takepart');
+  await button.scrollIntoViewIfNeeded();
+  await button.hover();
+  await page.waitForTimeout(800);
+  await expect(button).toHaveText(/^\s*ΚΑΤΕΒΑΣΕ ΤΗΝ ΕΡΕΥΝΑ\s*$/);
 });
 
 test('privacy terms open as a dialog and close with Escape', async ({ page }, testInfo) => {
@@ -23,6 +37,20 @@ test('privacy terms open as a dialog and close with Escape', async ({ page }, te
   await page.keyboard.press('Enter');
   await expect(dialog).toBeVisible();
   await expect(page.locator('.terms .close')).toBeFocused();
+
+  // The page behind stays put; the terms text scrolls inside the box.
+  const before = await page.evaluate(() => window.scrollY);
+  await page.mouse.move(640, 400);
+  await page.mouse.wheel(0, 600);
+  await page.waitForTimeout(400);
+  expect(await page.evaluate(() => window.scrollY)).toBe(before);
+  const copy = page.locator('.terms .terms_copy');
+  const sizes = await copy.evaluate((e) => ({ scroll: e.scrollHeight, client: e.clientHeight, top: e.scrollTop }));
+  expect(sizes.scroll).toBeGreaterThan(sizes.client);
+  expect(sizes.top).toBeGreaterThan(0);
+  const box = await page.locator('.terms .contterms').boundingBox();
+  const copyBox = await copy.boundingBox();
+  expect(copyBox.y + copyBox.height).toBeLessThanOrEqual(box.y + box.height + 1);
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
   await expect(opener).toBeFocused();
@@ -59,4 +87,18 @@ test('header is visible on load and content starts below it', async ({ page }) =
     viewport: window.innerHeight,
   }));
   expect(layout.contentTop).toBeGreaterThanOrEqual(layout.viewport * 0.9);
+});
+
+test('menu links scroll to their section', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'Menu checked on desktop.');
+  await openPage(page);
+  await page.locator('.topbar .burger').click();
+  for (const id of ['section-audience', 'section-about', 'section-cs08']) {
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(300);
+    if (!(await page.locator(`.topbar a[href="#${id}"]`).isVisible())) await page.locator('.topbar .burger').click();
+    await page.locator(`.topbar a[href="#${id}"]`).click();
+    const target = await page.locator(`#${id}`).evaluate((e) => e.getBoundingClientRect().top + window.scrollY);
+    await expect.poll(() => page.evaluate(() => window.scrollY), { timeout: 3000 }).toBeGreaterThan(target - 200);
+  }
 });

@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const { blockThirdParty } = require('./helpers');
 
-const DOWNLOADS = ['cs08.pdf', 'cs08-datamine.pdf', 'cs08-mediakit.zip', 'cs08-wallpaper.zip', 'cs08.csv', 'cs08-calendar.ics'];
+const DOWNLOADS = ['cs15.pdf', 'cs08.pdf', 'cs08-datamine.pdf', 'cs08-mediakit.zip', 'cs08-wallpaper.zip', 'cs08.csv', 'cs08-calendar.ics'];
 
 test('all internal links and assets respond with 200', async ({ page, request, baseURL }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'Same URLs on every viewport; checked once.');
